@@ -717,6 +717,15 @@ Banner Style
   background-size: cover;
   padding: 170px 0px 180px 0px;
 }
+.main-banner2 {
+  background-color: #01295e;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-size: cover;
+  padding: 70px 0px 50px 0px;
+}
 .ourcom{
   text-align: center;
   color: #01295e;
@@ -995,9 +1004,7 @@ Services Style
   max-width: 56px;
   transition: all .2s;
 }
-.services2{
-  
-}
+
 .services2 .service-item .main-content {
   border-radius: 25px;
   padding: 10px 30px 10px 30px;
@@ -1006,9 +1013,6 @@ Services Style
   margin-right: 80px;
   transition: all .4s;
   box-shadow: 5px 10px 18px #888888;
-}
-.services2 .service-item .main-content h5{
- width: ;
 }
 
 .services2 .service-item h4 {
@@ -2462,3 +2466,155 @@ button {
 #check {
   display: none !important
 }
+
+
+/* Reset and General Styles */
+
+
+.donation-container {
+  background-color: #fff;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header Section */
+.header-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Donation Amount Section */
+.amount-section {
+  background: linear-gradient(to bottom, #ff7f7f, #ffb3b3);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.amount-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.amount-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.amount-input span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.amount-input input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  outline: none;
+  width: 80px;
+}
+
+.support-text {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Payment Method Section */
+.payment-section h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 90px;
+  height: 60px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.red-card {
+  background: linear-gradient(to bottom right, #ff6b6b, #ff8f8f);
+}
+
+.purple-card {
+  background: linear-gradient(to bottom right, #8a5cff, #a074ff);
+}
+
+.yellow-card {
+  background: linear-gradient(to bottom right, #ffc107, #ffd54f);
+  color: #333;
+}
+
+.add-card {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Donate Button */
+.donate-button button {
+  background: #ff6b6b;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.donate-button button:hover {
+  background: #e65c5c;
+}
+
+
+
+
+

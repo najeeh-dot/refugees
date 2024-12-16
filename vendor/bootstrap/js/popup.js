@@ -33,3 +33,9 @@ document.querySelector('.floating-panel a').addEventListener('click', function(e
   event.preventDefault();
   document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+
+
+
+

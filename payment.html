@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+        .rounded {
+            border-radius: 100px;
+        }
+        .nav-tabs .nav-link {
+            color: #555;
+        }
+        .nav-tabs .nav-link.active {
+            color: white;
+            background-color: #01295e;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+
+        .popup-overlay {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            z-index: 1000; /* Ensure it is above all other content */
+        }
+
+        /* Popup content (image container) */
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 1001;
+        }
+
+        /* Close button for the popup */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Button styling */
+        .open-popup-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        /* Style for the popup overlay */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the popup content */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+/* Close button style */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Styling for the message */
+.popup-content h2 {
+    margin-top: 0;
+    color: #e74c3c;
+}
+
+.popup-content p {
+    color: #555;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div style="width: auto;height: auto;background-color: #ffffff;padding-top: 70px;padding-bottom: 70px;border-radius: 100px;">
+        <!-- For demo purpose -->
+        <div  class="row mb-4">
+            <div  class="col-lg-8 mx-auto text-center">
+                <h1 class="display-6">Complete your payment</h1>
+            </div>
+        </div>
+        <!-- End -->
+        <div  class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                            <!-- Credit card form tabs -->
+                            <ul role="tablist" class="nav nav-tabs rounded nav-fill mb-3">
+                                <li class="nav-item">
+                                    <a data-toggle="tab" href="#credit-card" class="nav-link active">
+                                        <i class="fas fa-credit-card mr-2"></i> Credit Card
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="tab" href="#paypal" class="nav-link">
+                                        <i class="fab fa-paypal mr-2"></i> PayPal
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="tab" href="#net-banking" class="nav-link">
+                                        <i class="fas fa-mobile-alt mr-2"></i> Net Banking
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Credit card form content -->
+                        <div class="tab-content">
+                            <!-- Credit card info -->
+                            <div id="credit-card" class="tab-pane fade show active pt-3">
+                                <form role="form" onsubmit="event.preventDefault()">
+                                    <div class="form-group">
+                                        <label for="username">
+                                            <h6>Card Owner</h6>
+                                        </label>
+                                        <input type="text" name="username" placeholder="Card Owner Name" required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardNumber">
+                                            <h6>Card number</h6>
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text text-muted">
+                                                    <i class="fab fa-cc-visa mx-1"></i>
+                                                    <i class="fab fa-cc-mastercard mx-1"></i>
+                                                    <i class="fab fa-cc-amex mx-1"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <label>
+                                                    <h6>Expiration Date</h6>
+                                                </label>
+                                                <div class="input-group">
+                                                    <input type="number" placeholder="MM" name="" class="form-control" required>
+                                                    <input type="number" placeholder="YY" name="" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4">
+                                                <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                                    <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label>
+                                                <input type="text" required class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button onclick="showPopup()" type="submit" style="background-color: #01295e;border: #01295e;" class="subscribe btn btn-primary btn-block shadow-sm">Confirm Payment</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- PayPal info -->
+                            <div id="paypal" class="tab-pane fade pt-3">
+                                <h6 class="pb-2">Select your PayPal account type</h6>
+                                <div class="form-group">
+                                    <label  class="radio-inline">
+                                        <input style="background-color: #01295e;" type="radio" name="optradio" checked> Domestic
+                                    </label>
+                                    <label class="radio-inline ml-5">
+                                        <input type="radio" name="optradio"> International
+                                    </label>
+                                </div>
+                                <p>
+                                 <a href="https://www.paypal.com/in/signin"> <button type="button" style="background-color: #01295e;" class="btn btn-primary">
+                                        <i class="fab fa-paypal mr-2"></i> Log into my PayPal
+                                    </button></a>  
+                                </p>
+                                <p class="text-muted">
+                                    Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website.
+                                </p>
+                            </div>
+                            <!-- Bank transfer info -->
+                            <div id="net-banking" class="tab-pane fade pt-3">
+                                <div class="form-group">
+                                    <label for="Select Your Bank">
+                                        <h6>Select your Bank</h6>
+                                    </label>
+                                    <select class="form-control" id="ccmonth">
+                                        <option value="" selected disabled>--Please select your Bank--</option>
+                                        <option>Bank 1</option>
+                                        <option>Bank 2</option>
+                                        <option>Bank 3</option>
+                                        <option>Bank 4</option>
+                                    </select>
+                                </div>
+                                <p>
+                                    <button onclick="openPopup()" type="button" style="background-color: #01295e;" class="btn btn-primary">
+                                        <i class="fas fa-mobile-alt mr-2"></i> Proceed Payment
+                                    </button>
+                                </p>
+                                <p class="text-muted">
+                                    Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="popup-overlay" id="imagePopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img style="width: 80%;" src="assets/images/upi_1734287496490.png" alt="Popup Image" style="width: 100%; height: auto;">
+        </div>
+    </div>
+
+
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Invalid Card Details</h2>
+            <p>Please check your card information and try again.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        function openPopup() {
+            document.getElementById("imagePopup").style.display = "block";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("imagePopup").style.display = "none";
+        }
+        
+// Function to show the popup
+function showPopup() {
+  document.getElementById('popup').style.display = 'flex';
+}
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+    </script>
+</body>
+</html>

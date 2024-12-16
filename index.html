@@ -19,13 +19,30 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
 
-TemplateMo 586 Scholar
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/7liIrNxhB2Usk6i7/",
+				type:"post",
+				data:$("#contact-form").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+		}
+	</script>
 
-https://templatemo.com/tm-586-scholar
-
--->
   </head>
 
 <body>
@@ -64,19 +81,10 @@ https://templatemo.com/tm-586-scholar
 
       <h2>Complete Your Donation</h2>
             <p>Help people access life-changing funds worldwide.</p>
-            <button class="donate-button">Donate once</button>
-            <button class="donate-button">Donate Monthly</button>
-            <div class="donation-options">
-                <div class="donation-option selected" onclick="selectOption(this)">$35</div>
-                <div class="donation-option" onclick="selectOption(this)">$50</div>
-                <div class="donation-option" onclick="selectOption(this)">$75</div>
-                <div class="donation-option" onclick="selectOption(this)">$125</div>
-                <div class="donation-option" onclick="selectOption(this)">Other Amount</div>
-            </div>
+            <label style="text-align: left;display: inline;" for="">pls select the place</label>
             
-            <p>OR</p>
-            <div class="donor-fund">Google pay | Donor Advised Fund</div><br>
-            <a href="#" class="more-ways">Explore more ways to give and make a bigger impact. &rarr;</a>
+           
+           
   </div>
 </div>
 
@@ -107,11 +115,11 @@ https://templatemo.com/tm-586-scholar
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="#services">Services</a></li>
+                      <li class="scroll-to-section"><a href="#services">Impact</a></li>
                       <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                       <li class="scroll-to-section"><a href="#team">Team</a></li>
-                      <li class="scroll-to-section"><a href="#events">Events</a></li>
-                      <li class="scroll-to-section"><a href="#contact">login</a></li>
+                      <li class="scroll-to-section"><a href="#testimonials">Stories</a></li>
+                      <li class="scroll-to-section"><a href="login.html">login</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -126,7 +134,24 @@ https://templatemo.com/tm-586-scholar
 
 
 
-  <input  type="checkbox" id="check"> <label style="position: fixed;z-index: 3;" class="chat-btn" for="check"> <i class="fab fa-whatsapp"></i> <i class=""></i> </label> <div style="z-index: 3;position: fixed;" class="wrapperchat"> <div class="header"> <h6 style="color: #fff;">Let's Chat - Online</h6> </div> <div class="text-center p-2"> <span>Please fill out the form to start chat!</span> </div> <div class="chat-form"> <input type="text" class="form-control" placeholder="Name"> <input type="text" class="form-control" placeholder="Email"> <textarea class="form-control" placeholder="Your Text Message"></textarea> <button class="btn btn-success btn-block">Submit</button> </div> </div>
+  <input  type="checkbox" id="check"> 
+  <label style="position: fixed;z-index: 3;" class="chat-btn" for="check"> 
+    <i class="fab fa-whatsapp" ></i> 
+    <i class=""></i> </label> 
+    <div style="z-index: 3;position: fixed;" class="wrapperchat"> 
+      <div class="header"> 
+        <h6 style="color: #fff;">Let's Chat - Online</h6> 
+      </div> 
+      <div class="text-center p-2"> 
+        <span>Please fill out the form to start chat!</span> 
+      </div> 
+      <div class="chat-form"> 
+        <input type="text" class="form-control" placeholder="Name" name="Name"> 
+        <input type="text" class="form-control" placeholder="Email" name="Email"> 
+        <textarea class="form-control" placeholder="Your Text Message" name="Message"></textarea> 
+        <button class="btn btn-success btn-block" id="submit-button">Submit</button> 
+      </div> 
+    </div>
 
 
   <div class="main-banner" id="top">
@@ -234,11 +259,11 @@ https://templatemo.com/tm-586-scholar
           
             <p style="justify-self: center;text-transform: capitalize;font-weight: 500;" di>clothing</p>
         </div>
-        <div class="boxeid shadow-sm ">
+       <a href="payment.html"><div class="boxeid shadow-sm ">
           <img style="width:60%; display: grid;justify-self: center;" src="assets/icon/restaurant.png" alt="">
           
-            <p style="justify-self: center;text-transform: capitalize;font-weight: 500;" di>restaurant</p>
-        </div>
+            <p style="justify-self: center;text-transform: capitalize;font-weight: 500;" di>food</p>
+        </div></a> 
         <div class="boxeid shadow-sm ">
           <img style="width:60%; display: grid;justify-self: center;" src="assets/icon/shelter.png" alt="">
           
@@ -308,7 +333,7 @@ https://templatemo.com/tm-586-scholar
               <span class="price"><h6><em>$</em>340</h6></span>
             </div>
             <div class="down-content">
-              <span class="author">Support the people of kharthoom in empowering their education.</span>
+              <span class="author">Support the people of kharthoom </span>
               <div class="mainline1">
                 <div class="subline2">
 
@@ -514,7 +539,7 @@ https://templatemo.com/tm-586-scholar
             <div class="main-content">
               <img src="assets/images/member-01.jpg" alt="">
               <span class="category">NGO</span>
-              <h4> Muslim World League 
+              <h4> Islamic Relief 
               </h4>
               <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-chrome"></i></a></li>
@@ -529,7 +554,7 @@ https://templatemo.com/tm-586-scholar
             <div class="main-content">
               <img src="assets/images/member-02.jpg" alt="">
               <span class="category">NGO</span>
-              <h4>Amnesty International
+              <h4 style="font-size: 21px;">Amnesty International
               </h4>
               <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-chrome"></i></a></li>
@@ -569,7 +594,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </div> 
 
-  <div class="section testimonials">
+  <div class="section testimonials" id="testimonials">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -649,7 +674,7 @@ https://templatemo.com/tm-586-scholar
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                    <button type="submit" id="form-submit" class="orange-button" onclick="SubForm()">Send Message Now</button>
                   </fieldset>
                 </div>
               </div>
@@ -677,6 +702,5 @@ https://templatemo.com/tm-586-scholar
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="vendor/bootstrap/js/popup.js"></script>
-
   </body>
 </html>
