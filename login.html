@@ -174,7 +174,9 @@
 <body>
 
 <div class="login-container">
+  <div style="display: flex;justify-self: end;"><a style="text-decoration: none;color: #01295e;" href="index.html">  <span style="font-size: 30px;cursor: pointer;" id="login-close">&times;</span></a></div>
   <h2>Welcome Back</h2>
+  
   <p>Please enter your details to access your account</p>
   
   <form>
@@ -224,7 +226,7 @@ function showPopup() {
   let userName = document.getElementById("user-name").value;
   let password = document.getElementById("password").value;
   if (userName == "thameem" && password == "123" ) {
-    window.open("profile.html");
+    window.open('profile.html');
   }else{
     document.getElementById('popup').style.display = 'flex';
   }

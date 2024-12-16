@@ -114,7 +114,7 @@
           <div class="row gy-4">
             <div class="col-12">
               <div class="card widget-card border-light shadow-sm">
-                <div style="background-color: #01295e;color: #fff;" class="card-header ">Welcome, Sheikh Tamim bin Hamad Al Thani</div>
+                <div style="background-color: #01295e;color: #fff;" class="card-header " id="welcomeName">Welcome, Sheikh Tamim bin Hamad Al Thani</div>
                 <div class="card-body">
                   <div class="text-center mb-3">
                     <img src="assets/images/download.jpg" class="img-fluid rounded-circle" alt="Luna John">
@@ -156,13 +156,13 @@
                       <div class="p-2">First Name</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2">Tamim</div>
+                      <div class="p-2" id="overviewFirstName">Tamim</div>
                     </div>
                     <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
                       <div class="p-2">Last Name</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2">bin Hamad</div>
+                      <div class="p-2" id="overviewLastName">bin Hamad</div>
                     </div>
                    
                   
@@ -170,32 +170,32 @@
                       <div class="p-2">Address</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2"> Doha, Qatar</div>
+                      <div class="p-2" id="overviewAddress"> Doha, Qatar</div>
                     </div>
                     <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
                       <div class="p-2">Country</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2">Qatar</div>
+                      <div class="p-2" id="overviewCountry">Qatar</div>
                     </div>
                     <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
                       <div class="p-2">Job</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2">Amir of the states of Qatar</div>
+                      <div class="p-2" id="overviewJob">Amir of the states of Qatar</div>
                     </div>
                    
                     <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
                       <div class="p-2">Phone</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2">+974 (248) 679-8745</div>
+                      <div class="p-2" id="overviewPhone">+974 (248) 679-8745</div>
                     </div>
                     <div class="col-5 col-md-3 bg-light border-bottom border-white border-3">
                       <div class="p-2">Email</div>
                     </div>
                     <div class="col-7 col-md-9 bg-light border-start border-bottom border-white border-3">
-                      <div class="p-2">amir@qatar.com</div>
+                      <div class="p-2" id="overviewEmail">amir@qatar.com</div>
                     </div>
                   </div>
                 </div>
@@ -218,11 +218,11 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
-                      <label for="inputFirstName" class="form-label" id="first-name">First Name</label>
+                      <label for="inputFirstName" class="form-label">First Name</label>
                       <input type="text" class="form-control" id="inputFirstName" value="Tamim">
                     </div>
                     <div class="col-12 col-md-6">
-                      <label for="inputLastName" class="form-label" id="last-name">Last Name</label>
+                      <label for="inputLastName" class="form-label">Last Name</label>
                       <input type="text" class="form-control" id="inputLastName" value="bin Hamad">
                     </div>
                   
@@ -616,11 +616,26 @@
     })
 
     function saveChanges () {
-      let firstName = document.getElementById("first-name");
-      let lastName = document.getElementById("last-name")
+      let firstName = document.getElementById("inputFirstName").value;
+      let lastName = document.getElementById("inputLastName").value;
       let fullNameChange = firstName + " " + lastName;
+      let inputJob = document.getElementById("inputJob").value;
+      let inputCompany = document.getElementById("inputCompany").value;
+      let inputPhone = document.getElementById("inputPhone").value;
+      let inputEmail = document.getElementById("inputEmail").value;
+      let inputAddress = document.getElementById("inputAddress").value;
+      let inputCountry = document.getElementById("inputCountry").value;
 
       document.getElementById("profile-name").innerHTML = fullNameChange;
+      document.getElementById("welcomeName").innerHTML = "Welcome, " + fullNameChange;
+
+      document.getElementById("overviewFirstName").innerHTML = firstName;
+      document.getElementById("overviewLastName").innerHTML = lastName;
+      document.getElementById("overviewAddress").innerHTML = inputAddress;
+      document.getElementById("overviewCountry").innerHTML = inputCountry;
+      document.getElementById("overviewJob").innerHTML = inputJob;
+      document.getElementById("overviewPhone").innerHTML = inputPhone;
+      document.getElementById("overviewEmail").innerHTML = inputEmail;
     }
   </script>
 </body>
