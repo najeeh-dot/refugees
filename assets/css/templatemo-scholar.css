@@ -962,6 +962,7 @@ Services Style
   align-items: center;
   align-self: center;
   display: inline-block;
+  cursor: pointer;
   padding-top: 10px;
   
   justify-content: center;
@@ -2613,8 +2614,13 @@ button {
 .donate-button button:hover {
   background: #e65c5c;
 }
-
-
-
-
-
+.boxeid img{
+  width:30%;
+  padding-top: 20%;
+   display: grid;
+   justify-self: center;
+   
+}
+.boxeid:hover{
+  border: solid 2px #01295e;
+}
