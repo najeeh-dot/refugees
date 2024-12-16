@@ -989,11 +989,11 @@ Services Style
 }
 
 .services2 .service-item .icon {
-  width: 120px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
   text-align: center;
-  line-height: 120px;
+  line-height: 50px;
   background-color: #01295e;
   border-radius: 50%;
   position: absolute;
@@ -1002,7 +1002,7 @@ Services Style
 }
 
 .services2 .service-item .icon img {
-  max-width: 56px;
+  max-width: 36px;
   transition: all .2s;
 }
 
@@ -1039,6 +1039,18 @@ About Style
   position: relative;
   padding: 0px;
   margin-top: 130px;
+}
+.col12{
+  padding: 5px;
+  border-radius: 25px;
+  color: #fff;
+}
+.col12 a:hover{
+  color: #fff;
+  font-size: 18px;
+}
+.col12:hover{
+  
 }
 
 .about-us:before {
@@ -1280,8 +1292,8 @@ Facts Style
   height: 100%;
   background-color: #01295e;
   content: '';
-  border-top-right-radius: 500px;
-  border-bottom-right-radius: 500px;
+  border-top-right-radius: 30vw;
+  border-bottom-right-radius: 30vw;
 }
 
 .fun-facts:after {
@@ -2135,7 +2147,7 @@ body {
 
 /* Popup content style */
 .popup-content {
-  background-color: white;
+
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -2145,30 +2157,34 @@ body {
 /* Donate button style */
 .donate-button {
   display: inline-block;
-  background-color: #01295e;
-  color: white;
+  background-color: #355fa7;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+
   margin: 10px 0;
 }
 
 .donate-button:hover {
-  background-color: #4c1955;
+  background-color: #01295e;
+  color: #fff;
 }
 
 /* Close button style */
 .close-button {
-  background-color: #355fa7;
-  color: white;
-  border: none;
+  
+  border: solid 1px #000000;
+  color: rgb(0, 0, 0);
+  
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .close-button:hover {
-  background-color: #6335a7;
+  background-color: #01295e;
+  color: #ffff;
 }
 
 /* Disable scrolling when the popup is active */
@@ -2304,19 +2320,7 @@ body {
   background-color: #2c3e50;
   color: white;
 }
-.donate-button {
-  
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.donate-button:hover {
-  background-color: #d89d1d;
-}
+
 .donor-fund {
   background-color: #133e7c;
   color: #ffffff;
@@ -2328,7 +2332,8 @@ body {
   font-weight: bold;
 }
 .donor-fund:hover{
-  background-color: #d89d1d;
+  background-color: #ffffff;
+  border: solid 1px #01295e;
   transition: .3s;
 }
 a.more-ways {
@@ -2600,20 +2605,7 @@ button {
 }
 
 /* Donate Button */
-.donate-button button {
-  background: #ff6b6b;
-  border: none;
-  border-radius: 30px;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 30px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
 
-.donate-button button:hover {
-  background: #e65c5c;
-}
 .boxeid img{
   width:30%;
   padding-top: 20%;
