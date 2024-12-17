@@ -713,6 +713,7 @@ Banner Style
 
 .main-banner {
   background: url(/assets/images/banner-bg.jpg);
+  background-color: #01295e;
   background-position: right bottom;
   background-repeat: no-repeat;
   border-bottom-right-radius: 50px;
