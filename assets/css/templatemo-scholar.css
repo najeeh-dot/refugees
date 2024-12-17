@@ -634,7 +634,7 @@ Header Style
   }
   .header-area .main-nav .logo {
     position: absolute;
-    left: 30px;
+    left: 20px;
     top: 0px;
   }
   .background-header .main-nav .logo {
@@ -661,7 +661,7 @@ Header Style
     padding: 0px 15px;
     height: 80px;
     box-shadow: none;
-    text-align: center;
+    text-align: left;
   }
   .header-area .container {
     padding: 0px;
