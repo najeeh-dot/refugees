@@ -83,7 +83,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -91,6 +91,7 @@ html, body {
 
 a {
   text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 700;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 ul {
@@ -137,7 +139,7 @@ body {
 
 .section {
   padding-top: 30px;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 
@@ -1145,7 +1147,7 @@ Courses Style
 */
 
 .courses {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .event_filter {
@@ -1850,8 +1852,9 @@ footer {
   position: relative;
   background-color: #01295e;
   vertical-align: middle;
-  min-height: 150px;
-  border-radius: 150px 150px 0px 0px;
+
+
+  
 }
 
 footer p {
@@ -1872,18 +1875,7 @@ footer p a:hover {
   opacity: 0.75;
 }
 
-footer::before {
-  background: url(../images/contact-dec-01.png);
-  position: absolute;
-  left: 30px;
-  transform: rotate(180deg);
-  opacity: 1;
-  bottom: 0;
-  width: 318px;
-  height: 119px;
-  content: '';
-  z-index: 2;
-}
+
 
 /* 
 ---------------------------------------------

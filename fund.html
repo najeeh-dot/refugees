@@ -22,6 +22,25 @@ body {
     align-items: center;
     height: 100vh;
 }
+html, body {
+  font-family: 'Montserrat', sans-serif !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e1e1e;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif !important;
+}
 
 /* Form Container */
 .form-container {
@@ -53,11 +72,11 @@ label {
 }
 
 input, select {
-    width: 100%;
+    width: auto;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 
@@ -185,6 +204,7 @@ input::placeholder {
 </head>
 <body>
     <div class="form-container">
+        <div style="display: flex;justify-self: end;"><a style="text-decoration: none;color: #01295e;" href="index.html">  <span style="font-size: 30px;cursor: pointer;" id="login-close">&times;</span></a></div>
         <h2>Where will the funds go?</h2>
         <form>
             <!-- Purpose of Raising Funds -->
@@ -246,7 +266,7 @@ input::placeholder {
 
      
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Next</button>
+           <a style="color: #fff;" href="index.html"> <button type="" class="submit-btn"><a style="color: #fff;" href="payment.html">Next</a></button></a> 
         </form>
     </div>
 
