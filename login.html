@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     body {
-      background: linear-gradient(to bottom, #01295e, #4f23ff);
+      background: linear-gradient(to bottom, #01295e, #01295e);
       font-family: Arial, sans-serif;
       margin: 0;
       display: flex;
@@ -55,7 +55,7 @@
       padding-right: 10px;
       margin-bottom: 20px;
     }
-    button {
+    .button {
       width: 100%;
       padding: 15px;
       background-color: #01295e;
@@ -64,8 +64,9 @@
       border-radius: 25px;
       font-size: 16px;
       cursor: pointer;
+      text-align: center;
     }
-    button:hover {
+    .button:hover {
       background-color: #01295e;
     }
     .signup-link {
@@ -183,7 +184,7 @@
     <input type="name" id="user-name" placeholder="Username">
     <input type="password" id="password" placeholder="Password">
     <a href="#" class="forgot-password" onclick="showPopup2()">Forgot Password?</a>
-    <button onclick="showPopup()" type="submit">Login</button>
+    <div class="button" onclick="showPopup()" type="submit">Login</div>
   </form>
 
  
@@ -226,7 +227,9 @@ function showPopup() {
   let userName = document.getElementById("user-name").value;
   let password = document.getElementById("password").value;
   if (userName == "thameem" && password == "123" ) {
-    window.open('profile.html');
+    window.location.href = 'profile.html';
+  }else if (userName == "admin" && password == "123") {
+    window.location.href = "/dashboard/public/index.html"
   }else{
     document.getElementById('popup').style.display = 'flex';
   }
