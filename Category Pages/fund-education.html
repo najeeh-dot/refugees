@@ -205,7 +205,7 @@ input::placeholder {
 </head>
 <body>
     <div class="form-container">
-        <div style="display: flex;justify-self: end;"><a style="text-decoration: none;color: #01295e;" href="index.html">  <span style="font-size: 30px;cursor: pointer;" id="login-close">&times;</span></a></div>
+        <div style="display: flex;justify-self: end;"><a style="text-decoration: none;color: #01295e;" href="/index.html">  <span style="font-size: 30px;cursor: pointer;" id="login-close">&times;</span></a></div>
         <h2>Where will the funds go?</h2>
         <form>
             <!-- Purpose of Raising Funds -->
@@ -213,7 +213,7 @@ input::placeholder {
             </label>
             <div class="field funder-div">
                
-                <div class="funder"><p>Education</p></div>
+                <div class="funder selected"><p>Education</p></div>
                 <div class="funder"><p>Healthcare</p></div>
                 <div class="funder"><p>Clothing</p></div>
                 <div class="funder"><p>Food</p></div>
@@ -275,7 +275,7 @@ input::placeholder {
 
     <script>
         const boxes = document.querySelectorAll('.funder');
-        let checked = false;
+        let checked = true;
         let checking = false;
         boxes.forEach((funder) => {
         funder.addEventListener('click', () => {

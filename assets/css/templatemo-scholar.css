@@ -689,6 +689,7 @@ Header Style
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
   }
+  
   .header-area.header-sticky .nav {
     margin-top: 100px !important;
   }
@@ -790,13 +791,16 @@ Banner Style
   margin-bottom: 20px;
 }
 
+.main-banner .item h4 {
+  margin-bottom: 10px;
+}
 .main-banner .item h2 {
   font-size: 48px;
   font-weight: 700;
   color: #fff;
   line-height: 60px;
   width: 60%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .main-banner .item p {
@@ -1050,9 +1054,6 @@ About Style
 .col12 a:hover{
   color: #fff;
   font-size: 18px;
-}
-.col12:hover{
-  
 }
 
 .about-us:before {
@@ -1975,6 +1976,7 @@ body {
     height: 170px;
     line-height: 170px;
   }
+
   .about-us .section-heading {
     margin-left: 0px;
     margin-top: 120px;
